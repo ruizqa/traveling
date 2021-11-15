@@ -39,8 +39,12 @@ heffalumps['west']=eeyore
 let player={location:tigger}
 
 function move(direction){
-
+    if(direction in player.location){
     player.location = player.location[direction]
-    console.log(`You are now at ${player.location.character}'s house`)
+    console.log(`You are now at ${player.location.character}'s house`);
+    }
+    else{
+        console.log("You may not go that way");
+    }
 
 }
